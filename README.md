@@ -1,3 +1,47 @@
+# MEM SERWIS
+
+Application enabling:
+* viewing memes
+* upvoting and downvoting memes
+
+## Installation
+
+Clone this repository:
+
+```bash
+git clone https://github.com/KurczakKING/mem-serwis-flaga-monika.git
+cd mem-serwis-flaga-monika
+```
+
+Install dependencies:
+
+```bash
+npm i
+```
+
+## Running
+
+Start server at http://localhost:3000:
+
+```bash
+npm run start
+```
+
+## Technologies
+
+* HTML, CSS
+* JavaScript
+
+## Contributing
+Pull requests and discussions of improving the app are welcome.
+
+## License
+[UNLICENSE](https://choosealicense.com/licenses/unlicense/)
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
