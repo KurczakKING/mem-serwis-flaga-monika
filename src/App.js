@@ -1,22 +1,26 @@
-import "./styles.css";
-import { Routes, Route, Link } from "react-router-dom";
+import "./styles/styles.css";
+import { Routes, Route, NavLink, Link } from "react-router-dom";
 import { Hot } from "./routes/Hot";
 import { Regular } from "./routes/Regular";
+import { Mem } from "./components/Mem";
 
 function App() {
   return (
     <div className="App">
       <div className="nav">
-        <Link to="/hot" className="linkStyle">
+        <h3>choose memes:</h3>
+        <NavLink to="/hot" className="linkStyle">
           Hot
-        </Link>
-        <Link to="/regular" className="linkStyle">
+        </NavLink>
+        <NavLink to="/regular" className="linkStyle">
           Regular
-        </Link>
+        </NavLink>
       </div>
       <div className="main">
         <p></p>
-        <img />
+        <div>
+          <Mem />
+        </div>
       </div>
       <Routes>
         <Route path="/" element={<Regular />} />
