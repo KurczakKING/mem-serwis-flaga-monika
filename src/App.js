@@ -1,5 +1,5 @@
 import "./styles/styles.css";
-import { Routes, Route, NavLink, Link } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 import { Hot } from "./routes/Hot";
 import { Regular } from "./routes/Regular";
 import { Mem } from "./components/Mem";
@@ -17,7 +17,6 @@ function App() {
         </NavLink>
       </div>
       <div className="main">
-        <p></p>
         <div>
           <Mem />
         </div>
