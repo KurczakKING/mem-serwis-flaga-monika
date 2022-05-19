@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MEMES } from "./memes";
-import { Button, unstable_createMuiStrictModeTheme } from "@mui/material";
+import { Button } from "@mui/material";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 
