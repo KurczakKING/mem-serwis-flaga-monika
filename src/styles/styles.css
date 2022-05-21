@@ -12,7 +12,7 @@ body {
   text-align: center;
 }
 
-.nav {
+nav {
   position: fixed;
   width: 31%;
   height: 100%;
