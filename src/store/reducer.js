@@ -2,9 +2,9 @@
 import { MEMES } from "../components/memes";
 
 //const initialStore = { Mem };
-const initialStore = { regular: MEMES, hot: [] };
+const initialStore = { memes: MEMES };
 
-const ACTIONS_TYPES = {
+export const ACTIONS_TYPES = {
   UPVOTE: "UPVOTE",
   DOWNVOTE: "DOWNVOTE",
   PUSH_MEM: "PUSH_MEM",
@@ -13,7 +13,18 @@ const ACTIONS_TYPES = {
 export const reducer = (store = initialStore, action) => {
   switch (action.type) {
     case ACTIONS_TYPES.UPVOTE: {
-      return { ...store };
+      return {
+        ...store,
+        memes: store.memes.map((meme) => {
+          if (meme.title === action.payload.title) {
+            return {
+              ...meme,
+              upvotes: meme.upvotes + 1,
+            };
+          }
+          return meme;
+        }),
+      };
     }
     case ACTIONS_TYPES.DOWNVOTE: {
       return { ...store };

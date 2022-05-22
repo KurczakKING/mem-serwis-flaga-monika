@@ -1,7 +1,7 @@
 export const MEMES = [
   {
     title: "Mem 1",
-    upvotes: 6,
+    upvotes: 4,
     downvotes: 0,
     img: "/img/img1.png",
   },
