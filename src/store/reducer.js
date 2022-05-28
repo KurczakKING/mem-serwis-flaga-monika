@@ -1,13 +1,11 @@
-//import { Mem } from "../components/Mem";
 import { MEMES } from "../components/memes";
 
-//const initialStore = { Mem };
 const initialStore = { memes: MEMES };
 
 export const ACTIONS_TYPES = {
   UPVOTE: "UPVOTE",
   DOWNVOTE: "DOWNVOTE",
-  PUSH_MEM: "PUSH_MEM",
+  ADD_MEM: "ADD_MEM",
 };
 
 export const reducer = (store = initialStore, action) => {
@@ -27,9 +25,20 @@ export const reducer = (store = initialStore, action) => {
       };
     }
     case ACTIONS_TYPES.DOWNVOTE: {
-      return { ...store };
+      return {
+        ...store,
+        memes: store.memes.map((meme) => {
+          if (meme.title === action.payload.title) {
+            return {
+              ...meme,
+              downvotes: meme.downvotes + 1,
+            };
+          }
+          return meme;
+        }),
+      };
     }
-    case ACTIONS_TYPES.PUSH_MEM: {
+    case ACTIONS_TYPES.ADD_MEM: {
       return { ...store };
     }
     default: {

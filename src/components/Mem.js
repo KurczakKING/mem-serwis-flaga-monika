@@ -1,18 +1,12 @@
-import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { ACTIONS_TYPES } from "../store/reducer";
 import { Button } from "@mui/material";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
-import { useSelector, useDispatch } from "react-redux";
-import { ACTIONS_TYPES } from "../store/reducer";
-//import { useNavigate } from "react-router-dom";
-//import { MEMES } from "../components/memes";
 
 export const Mem = ({ memes }) => {
-  //const [memes, setMemes] = useState(MEMES);
-  //const [memes, setMemes] = useState(({regular: INITIAL_ARRAY, hot: []}));
-  //const navigate = useNavigate();
   const dispatch = useDispatch();
-  //const [votes, setVotes] = useState(meme.downvotes-meme.upvotes);
+
   const upvote = (title) => {
     dispatch({ type: ACTIONS_TYPES.UPVOTE, payload: { title: title } });
   };

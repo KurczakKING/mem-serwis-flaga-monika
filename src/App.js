@@ -6,31 +6,18 @@ import { Regular } from "./routes/Regular";
 import { AddMeme } from "./routes/AddMeme";
 import { NoMatch } from "./components/NoMatch";
 import { Navigate } from "react-router-dom";
-import { NavLink } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <nav>
-        <h3>choose memes:</h3>
-        <NavLink to="/hot" className="linkStyle">
-          Hot
-        </NavLink>
-        <NavLink to="/regular" className="linkStyle">
-          Regular
-        </NavLink>
-        <NavLink to="/add-meme" className="linkStyle">
-          Add Meme
-        </NavLink>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Navigate to="/regular" />} />
+    <Routes>
+      <Route path="/" element={<Navigate to="/regular" />} />
+      <Route path="/" element={<Layout />}>
         <Route path="hot" element={<Hot />} />
         <Route path="regular" element={<Regular />} />
         <Route path="add-meme" element={<AddMeme />} />
         <Route path="*" element={<NoMatch />} />
-      </Routes>
-    </div>
+      </Route>
+    </Routes>
   );
 }
 
