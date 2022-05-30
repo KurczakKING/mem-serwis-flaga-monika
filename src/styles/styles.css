@@ -84,3 +84,22 @@ span {
   margin-right: 5px;
   font-weight: bold;
 }
+
+.inline {
+  display: inline-block;
+}
+
+.star {
+  visibility: hidden;
+  font-size: 30px;
+  cursor: pointer;
+}
+.star:before {
+  content: "\2606";
+  visibility: visible;
+  color: yellow;
+}
+.star:checked:before {
+  content: "\2605";
+  color: yellow;
+}

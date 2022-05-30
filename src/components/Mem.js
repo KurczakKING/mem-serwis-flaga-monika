@@ -4,7 +4,10 @@ import TimeAgo from "./TimeAgo";
 import { Button } from "@mui/material";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
-import { useState } from "react";
+import { Box } from "@mui/material";
+import { Checkbox } from "@mui/material";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
+import StarIcon from "@mui/icons-material/Star";
 
 export const Mem = ({ memes }) => {
   const dispatch = useDispatch();
@@ -29,15 +32,18 @@ export const Mem = ({ memes }) => {
     .map((meme) => {
       return (
         <div key={meme.title} className="mem">
-          <h2>{meme.title}</h2>
-          <TimeAgo timestamp={meme.date} />
-          <img src={meme.img} width="85%" />
+          <Box component="div" sx={{ display: "inline" }}>
+            <h2 className="inline">{meme.title}</h2>
+          </Box>
           <input
             type="checkbox"
+            className="star"
             defaultChecked={meme.favourite}
             title={meme.title}
             onChange={toggleFavourite}
           />
+          <TimeAgo timestamp={meme.date} />
+          <img src={meme.img} width="85%" />
           <div className="vote">
             <Button
               color="success"
