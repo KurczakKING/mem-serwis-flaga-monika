@@ -1,10 +1,23 @@
 import { NavLink, Outlet } from "react-router-dom";
+import { Box } from "@mui/system";
+import { Typography } from "@mui/material";
 
 export const Navbar = () => {
   return (
     <>
       <nav>
-        <h3>choose memes:</h3>
+        <Typography
+          pt={3}
+          m={3}
+          variant="h3"
+          sx={{
+            fontSize: 25,
+            fontStyle: "italic",
+            color: "aquamarine",
+          }}
+        >
+          choose memes:
+        </Typography>
         <NavLink to="/hot" className="linkStyle">
           Hot
         </NavLink>

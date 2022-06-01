@@ -6,34 +6,22 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #bcbcbc;
-}
-
-.App {
+  background-image: url("../../public/img/background.jpg");
+  background-size: cover;
   text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 nav {
   position: fixed;
-  width: 31%;
-  height: 100%;
-  background-color: #01015d;
   display: flex;
   flex-direction: column;
-}
-
-nav h3 {
-  margin-top: 40px;
-  font-size: 15pt;
-}
-
-h3 {
-  color: aquamarine;
-  margin-top: -12px;
-  margin-bottom: 19px;
-  font-size: 9pt;
-  font-weight: normal;
-  font-style: italic;
+  background-color: #01015d;
+  width: 33%;
+  max-width: 400px;
+  margin-left: 3%;
+  height: 100%;
 }
 
 .linkStyle {
@@ -58,18 +46,6 @@ a.active {
   cursor: default;
 }
 
-.main {
-  margin-left: 31%;
-  padding: 10px;
-}
-
-.mem {
-  padding-bottom: 35px;
-  padding-top: 5px;
-  margin-bottom: 10px;
-  background-color: black;
-}
-
 h2 {
   color: yellow;
   font-variant: small-caps;
@@ -91,8 +67,9 @@ span {
 
 .star {
   visibility: hidden;
-  font-size: 30px;
+  font-size: 50px;
   cursor: pointer;
+  margin-left: 20px;
 }
 .star:before {
   content: "\2606";

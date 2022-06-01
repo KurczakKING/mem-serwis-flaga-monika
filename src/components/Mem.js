@@ -4,8 +4,8 @@ import TimeAgo from "./TimeAgo";
 import { Button } from "@mui/material";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
+import { Grid } from "@mui/material";
 import { Box } from "@mui/material";
-import { Checkbox } from "@mui/material";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import StarIcon from "@mui/icons-material/Star";
 
@@ -31,17 +31,27 @@ export const Mem = ({ memes }) => {
     .sort((a, b) => b.date.localeCompare(a.date))
     .map((meme) => {
       return (
-        <div key={meme.title} className="mem">
-          <Box component="div" sx={{ display: "inline" }}>
-            <h2 className="inline">{meme.title}</h2>
-          </Box>
-          <input
-            type="checkbox"
-            className="star"
-            defaultChecked={meme.favourite}
-            title={meme.title}
-            onChange={toggleFavourite}
-          />
+        <Box
+          key={meme.title}
+          mt={2}
+          ml={{ xs: '38%', sm: '38%', md: '38%', lg: '36%', xl: '30%' }}
+          p={{ sm: 2, md: 3 }}
+          backgroundColor={"black"}
+        >
+          <Grid container spacing={2}>
+            <Grid item xs={6}>
+              <h2 className="inline">{meme.title} </h2>
+            </Grid>
+            <Grid item xs={2}>
+              <input
+                type="checkbox"
+                className="star"
+                defaultChecked={meme.favourite}
+                title={meme.title}
+                onChange={toggleFavourite}
+              ></input>
+            </Grid>
+          </Grid>
           <TimeAgo timestamp={meme.date} />
           <img src={meme.img} width="85%" />
           <div className="vote">
@@ -57,7 +67,7 @@ export const Mem = ({ memes }) => {
               <span>{meme.downvotes}</span> <ThumbDownIcon />
             </Button>
           </div>
-        </div>
+        </Box>
       );
     });
 };
