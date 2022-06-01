@@ -6,9 +6,5 @@ export const Hot = () => {
     store.memes.filter((meme) => meme.upvotes - meme.downvotes >= 5)
   );
 
-  return (
-    <div className="main">
-      <Mem memes={memes} />
-    </div>
-  );
+  return <Mem memes={memes} />;
 };

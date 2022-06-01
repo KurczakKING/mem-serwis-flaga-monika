@@ -14,6 +14,7 @@ body {
 }
 
 nav {
+  margin-top: -16px;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -25,7 +26,7 @@ nav {
 }
 
 .linkStyle {
-  margin: 20px;
+  margin: 15px 15%;
   padding: 10px;
   border: 1.5px solid yellow;
   border-radius: 20px;
@@ -47,29 +48,14 @@ a.active {
 }
 
 h2 {
-  color: yellow;
   font-variant: small-caps;
-}
-
-.vote {
-  padding-top: 20px;
-  margin-bottom: -10px;
-}
-
-span {
-  margin-right: 5px;
-  font-weight: bold;
-}
-
-.inline {
-  display: inline-block;
 }
 
 .star {
   visibility: hidden;
-  font-size: 50px;
+  font-size: 48px;
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 1%;
 }
 .star:before {
   content: "\2606";
@@ -79,4 +65,20 @@ span {
 .star:checked:before {
   content: "\2605";
   color: yellow;
+}
+
+@media screen and (min-width: 1400px) {
+  nav {
+    margin-left: 5%;
+  }
+}
+@media screen and (min-width: 1550px) {
+  nav {
+    margin-left: 8%;
+  }
+}
+@media screen and (min-width: 1900px) {
+  nav {
+    margin-left: 14%;
+  }
 }

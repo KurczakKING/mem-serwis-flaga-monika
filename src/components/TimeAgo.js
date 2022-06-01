@@ -1,4 +1,5 @@
 import { parseISO, formatDistanceToNow } from "date-fns";
+import { Box } from "@mui/system";
 
 const TimeAgo = ({ timestamp }) => {
   let timeAgo = "";
@@ -8,6 +9,10 @@ const TimeAgo = ({ timestamp }) => {
     timeAgo = `${timePeriod} ago`;
   }
 
-  return <h3 title={timestamp}>{timeAgo}</h3>;
+  return (
+    <Box pb={2} mt={-1} fontStyle="italic" color="aquamarine">
+      {timeAgo}
+    </Box>
+  );
 };
 export default TimeAgo;

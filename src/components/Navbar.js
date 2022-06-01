@@ -1,5 +1,4 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 
 export const Navbar = () => {
@@ -9,12 +8,9 @@ export const Navbar = () => {
         <Typography
           pt={3}
           m={3}
-          variant="h3"
-          sx={{
-            fontSize: 25,
-            fontStyle: "italic",
-            color: "aquamarine",
-          }}
+          fontSize={25}
+          fontStyle="italic"
+          color="aquamarine"
         >
           choose memes:
         </Typography>
