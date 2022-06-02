@@ -1,25 +1,26 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { Box } from "@mui/system";
 
 export const AddMeme = (props) => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState("");
   const [image, setImage] = useState([]);
 
- /* function addMeme(event) {
+  /* function addMeme(event) {
     event.preventDefault();
     alert(`The name you entered was: ${title}${image}`);
   }*/
 
-const addImage = event => {
-  const [file] = event.target.files;
-  //set
-}
+  const addImage = (event) => {
+    const [file] = event.target.files;
+    //set
+  };
 
   const canAdd = Boolean(title) && Boolean(image);
 
   return (
-    <div class='main'>
+    <Box mt={2}>
       <form /*onSubmit={addMeme}*/>
         <div>
           <label>Title</label>
@@ -31,10 +32,7 @@ const addImage = event => {
             />
           </div>
           <div>
-            <input
-              type="file"
-              onChange={setImage}
-            />
+            <input type="file" onChange={setImage} />
           </div>
         </div>
         <div>
@@ -43,7 +41,10 @@ const addImage = event => {
           </button>
         </div>
       </form>
-      <div>{title}{[image]}</div>
-    </div>
+      <div>
+        {title}
+        {[image]}
+      </div>
+    </Box>
   );
 };

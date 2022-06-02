@@ -8,11 +8,11 @@ export const Navbar = () => {
         <Typography
           pt={3}
           m={3}
-          fontSize={25}
+          fontSize={23}
           fontStyle="italic"
           color="aquamarine"
         >
-          choose memes:
+          Choose memes:
         </Typography>
         <NavLink to="/hot" className="linkStyle">
           Hot
@@ -20,6 +20,15 @@ export const Navbar = () => {
         <NavLink to="/regular" className="linkStyle">
           Regular
         </NavLink>
+        <Typography
+          pt={3}
+          m={3}
+          fontSize={23}
+          fontStyle="italic"
+          color="aquamarine"
+        >
+          Create your own meme!
+        </Typography>
         <NavLink to="/add-meme" className="linkStyle">
           Add Meme
         </NavLink>
