@@ -6,7 +6,7 @@ export const ACTIONS_TYPES = {
   UPVOTE: "UPVOTE",
   DOWNVOTE: "DOWNVOTE",
   TOGGLE_FAVOURITE: "TOGGLE_FAVOURITE",
-  ADD_MEM: "ADD_MEM",
+  ADD_MEME: "ADD_MEME",
 };
 
 export const reducer = (store = initialStore, action) => {
@@ -53,8 +53,8 @@ export const reducer = (store = initialStore, action) => {
         }),
       };
     }
-    case ACTIONS_TYPES.ADD_MEM: {
-      return { ...store };
+    case ACTIONS_TYPES.ADD_MEME: {
+      return { ...store, memes: [...store.memes, action.payload.newMeme] };
     }
     default: {
       return store;
