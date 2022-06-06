@@ -16,7 +16,6 @@ Clone this repository:
 
 ```bash
 git clone https://github.com/KurczakKING/mem-serwis-flaga-monika.git
-cd mem-serwis-flaga-monika
 ```
 
 Open the folder:
